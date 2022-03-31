@@ -21,8 +21,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Simple Timer" id="CWq-zy-j3Y">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="Mti-ey-Jfy"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="wfg-op-B8b"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="Mti-ey-Jfy">
+                                            <connections>
+                                                <action selector="pauseDidPress:" destination="BYZ-38-t0r" id="5qy-Qw-lYT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="wfg-op-B8b">
+                                            <connections>
+                                                <action selector="playDidPress:" destination="BYZ-38-t0r" id="dwq-wr-xa4"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -30,15 +38,27 @@
                                 <rect key="frame" x="0.0" y="761" width="390" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="-10" id="i4l-a2-ErD"/>
+                                    <barButtonItem title="-10" id="i4l-a2-ErD">
+                                        <connections>
+                                            <action selector="minusDidPress:" destination="BYZ-38-t0r" id="UfO-Gh-ZEU"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="1FC-9G-ZTh"/>
-                                    <barButtonItem title="Reset" id="FMh-gt-8px"/>
+                                    <barButtonItem title="Reset" id="FMh-gt-8px">
+                                        <connections>
+                                            <action selector="resetDidPress:" destination="BYZ-38-t0r" id="KFi-jF-pl3"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="iMs-ZY-FYi"/>
-                                    <barButtonItem title="+10" id="hTX-gG-Nrz"/>
+                                    <barButtonItem title="+10" id="hTX-gG-Nrz">
+                                        <connections>
+                                            <action selector="plusDidPress:" destination="BYZ-38-t0r" id="Y73-rd-LD9"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bs1-Jt-gYF">
-                                <rect key="frame" x="142.66666666666666" y="374.33333333333331" width="104.66666666666666" height="95.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bs1-Jt-gYF">
+                                <rect key="frame" x="168.66666666666666" y="374.33333333333331" width="52.666666666666657" height="95.666666666666686"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -61,6 +81,9 @@
                             <constraint firstItem="bs1-Jt-gYF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xlV-Vm-3Tq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tickLabel" destination="bs1-Jt-gYF" id="cxn-Oa-uP3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
