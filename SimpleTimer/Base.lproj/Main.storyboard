@@ -82,6 +82,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playButton" destination="wfg-op-B8b" id="UNt-26-nUZ"/>
                         <outlet property="tickLabel" destination="bs1-Jt-gYF" id="cxn-Oa-uP3"/>
                     </connections>
                 </viewController>
